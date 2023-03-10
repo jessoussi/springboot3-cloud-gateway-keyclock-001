@@ -1,0 +1,39 @@
+spring:
+  security:
+    oauth2:
+      client:
+        provider:
+          my-keycloak-provider:
+            issuer-uri: http://localhost:8080/realms/My-Realm
+        registration:
+          keycloak-spring-gateway-client:
+            provider: my-keycloak-provider
+            client-id: spring-gateway-client
+            client-secret: BFmCbYDk6bKLlmht0HNBXJCiSF88u8Ir
+            authorization-grant-type: authorization_code
+            redirect-uri: 'http://localhost:9090/login/oauth2/code/keycloak'
+            scope: openid, SCOPE_product:read
+
+
+  cloud:
+    gateway:
+      default-filters:
+        - TokenRelay
+      routes:
+        - id: product-resource-server
+          uri: http://localhost:9191
+          predicates:
+            - Path=/product/**
+        - id: myapp
+          uri: http://localhost:4200
+          predicates:
+            - Path=/myapp
+
+server:
+  port: 9090
+
+
+logging:
+  level:
+    org:
+      springframework: DEBUG
