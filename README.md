@@ -19,3 +19,20 @@ go to http://localhost:8080
 
 4- Create user with password
 ![image](https://user-images.githubusercontent.com/1805479/224290575-192e43bc-07ab-4f0a-b656-6d057b4a2567.png)
+
+5 - Run Spring cloud Gateway
+
+6 - Run Product Service
+
+7- Call product service API behind Gateway: http://localhost:9090/product/
+
+8- User should be redirect to keyclock login page: 
+
+![image](https://user-images.githubusercontent.com/1805479/224292736-2aa881dc-a4fc-4d8f-a689-8dfdcb49aeaf.png)
+
+9- After login phase, user will be redirect to product service behing gateway:
+
+![image](https://user-images.githubusercontent.com/1805479/224292985-e5fa1556-e8a8-45f4-b716-9210c57a7cd4.png)
+
+
+
