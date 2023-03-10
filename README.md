@@ -14,21 +14,31 @@ $> kc.sh start
 
 3 - Select created Realm
 
+4- Create Client 
 
-4- Create user with password
+![image](https://user-images.githubusercontent.com/1805479/224293467-ae12762d-01b0-4a5c-a96d-c823ae79e82c.png)
+
+5- Get the client secret
+
+![image](https://user-images.githubusercontent.com/1805479/224293618-e8a3b803-e16e-4f67-b6be-87e126fd3cc0.png)
+
+
+6 - Create user with password
 ![image](https://user-images.githubusercontent.com/1805479/224290575-192e43bc-07ab-4f0a-b656-6d057b4a2567.png)
 
-5 - Run Spring cloud Gateway
+7 - Run Spring cloud Gateway
 
-6 - Run Product Service
+You should configure in the application.yml file the client id and client secret created in keyclock
 
-7- Call product service API behind Gateway: http://localhost:9090/product/
+8 - Run Product Service
 
-8- User should be redirect to keyclock login page: 
+9- Call product service API behind Gateway: http://localhost:9090/product/
+
+10- User should be redirect to keyclock login page: 
 
 ![image](https://user-images.githubusercontent.com/1805479/224292736-2aa881dc-a4fc-4d8f-a689-8dfdcb49aeaf.png)
 
-9- After login phase, user will be redirect to product service behing gateway:
+10 - After login phase, user will be redirect to product service behing gateway:
 
 ![image](https://user-images.githubusercontent.com/1805479/224292985-e5fa1556-e8a8-45f4-b716-9210c57a7cd4.png)
 
